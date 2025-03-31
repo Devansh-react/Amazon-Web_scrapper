@@ -1,8 +1,5 @@
-Here's your **README.md** file for the Amazon India Smart TV Scraper project.  
 
----
-
-# **Amazon India Smart TV Scraper**  
+# **AI Scraper**  
 
 This project is a **web scraper** for **Amazon India Smart TV product pages**. It extracts product details, images, and descriptions and generates an **AI-based review summary** and an **AI-generated image** for the product.
 
