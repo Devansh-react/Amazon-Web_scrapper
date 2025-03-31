@@ -12,11 +12,11 @@ def generate_ai_summary(reviews):
 
     try:
         response = openai.ChatCompletion.create(
-            model="gpt-4-turbo",  # Updated model name
+            model="gpt-4-turbo",  
             messages=[{"role": "system", "content": prompt}],
             temperature=0.7
         )
-        return response.choices[0].message["content"]  # Updated way to access response
+        return response.choices[0].message["content"]  
     except Exception as e:
         print("AI Summary Error:", str(e))
         return "AI Summary Failed. Please try again later."

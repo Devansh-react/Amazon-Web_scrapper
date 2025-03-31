@@ -14,15 +14,15 @@ def scrape_amazon_product(url):
     options.add_argument("--window-size=1920x1080")
     options.add_argument("start-maximized")
     options.add_argument("disable-infobars")
-    options.add_argument("--disable-blink-features=AutomationControlled")  # Anti-bot measure
+    options.add_argument("--disable-blink-features=AutomationControlled")  
     options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36")
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.get(url)
 
     try:
-        # Wait up to 10 seconds for elements to appear
-        wait = WebDriverWait(driver, 10)
+        
+        wait = WebDriverWait(driver, 8)
 
         product_name = wait.until(EC.presence_of_element_located((By.ID, "productTitle"))).text.strip()
         rating = wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, "span.a-icon-alt"))).text.strip()
